@@ -1,0 +1,16 @@
+name = "kids-clothing-store"
+compatibility_date = "2024-01-01"
+
+[env.production]
+account_id = ""
+workers_dev = false
+route = ""
+
+[[env.production.rules]]
+type = "ESModule"
+globs = ["**/*.js"]
+
+[build]
+command = "npm run pages:build"
+cwd = "."
+watch_dir = "."
